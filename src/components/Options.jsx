@@ -9,7 +9,7 @@ const Options = ({ options, updateFeedback, resetFeedback, totalFeedback }) => {
             {option !== "Reset" ? (
               <button onClick={() => updateFeedback(option)}>{option}</button>
             ) : (
-              totalFeedback > 0 && ( // Додайте умову тут
+              totalFeedback > 0 && (
                 <button onClick={resetFeedback}>Reset</button>
               )
             )}

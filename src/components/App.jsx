@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import Feedback from "./Feedback";
 import Options from "./Options";
+import Description from "./Description";
 import css from "./App.module.css";
 
 function App() {
   // Стан для зберігання типів відгуків
   const [feedbackTypes, setFeedbackTypes] = useState(() => {
-    const sevedFeedback = JSON.parse(localStorage.getItem("feedbackTypes"));
+    const savedFeedback = JSON.parse(localStorage.getItem("feedbackTypes"));
     return (
-      sevedFeedback || {
+      savedFeedback || {
         good: 0,
         neutral: 0,
         bad: 0,
@@ -47,12 +48,8 @@ function App() {
   );
 
   return (
-    <div>
-      <h1 className={css.title}> Happens Café</h1>
-      <p className={css.text}>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
+    <div className={css.container}>
+      <Description />
       {/* Передача опцій, функції оновлення стану та функції скидання відгуків */}
       <Options
         options={options}
