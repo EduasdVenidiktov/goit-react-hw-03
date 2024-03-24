@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Feedback from "./Feedback";
 import Options from "./Options";
 import css from "./App.module.css";
 
 function App() {
   // Стан для зберігання типів відгуків
-  const [feedbackTypes, setFeedbackTypes] = useState({
-    good: 0,
-    neutral: 0,
-    bad: 0,
+  const [feedbackTypes, setFeedbackTypes] = useState(() => {
+    const sevedFeedback = JSON.parse(localStorage.getItem("feedbackTypes"));
+    return (
+      sevedFeedback || {
+        good: 0,
+        neutral: 0,
+        bad: 0,
+      }
+    );
   });
 
   // Функція для оновлення стану відгуку
@@ -26,6 +31,10 @@ function App() {
       neutral: 0,
       bad: 0,
     });
+  // Ефект для збереження стану в локальне сховище
+  useEffect(() => {
+    localStorage.setItem("feedbackTypes", JSON.stringify(feedbackTypes));
+  }, [feedbackTypes]);
 
   const options = ["Good", "Neutral", "Bad", "Reset"];
 
