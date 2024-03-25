@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import Feedback from "./Feedback";
-import Options from "./Options";
-import Description from "./Description";
+import Feedback from "./components/Feedback/Feedback";
+import Options from "./components/Options/Options";
+import Description from "./components/Description/Description";
+import Notification from "./components/Notification/Notification";
 import css from "./App.module.css";
 
 function App() {
@@ -67,9 +68,7 @@ function App() {
           positiveFeedback={positiveFeedback}
         />
       ) : (
-        <p className={css.feedbackText}>
-          No feedback yet. Please leave your feedback!
-        </p>
+        <Notification />
       )}
     </div>
   );
