@@ -1,9 +1,7 @@
 .container {
-  margin-top: 50px;
+  margin: 40px;
+  max-width: 1440px;
 }
-
-h1,
-p {
-  text-align: center;
+.title {
   margin-bottom: 20px;
 }

@@ -1,0 +1,15 @@
+.feedbackText {
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.label {
+  font-weight: bold;
+}
+.inputArea {
+  width: 250px;
+  height: 30px;
+}
+.inputArea:hover {
+  border-color: blue;
+  background-color: rgb(214, 213, 213);
+}

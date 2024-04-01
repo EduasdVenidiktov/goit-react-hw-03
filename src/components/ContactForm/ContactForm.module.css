@@ -1,0 +1,42 @@
+.title,
+.text {
+  margin-bottom: 20px;
+}
+
+.inputArea:hover {
+  border-color: blue;
+}
+
+.form {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: rgb(81, 101, 215);
+  width: 250px;
+  border: 3px solid black;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.field {
+  padding: 5px;
+  background-color: rgb(203, 201, 201);
+  cursor: text;
+}
+.btnAdd {
+  margin-top: 20px;
+  background-color: #f0f01c;
+  border-radius: 4px;
+  padding: 5px;
+  color: blue;
+  cursor: pointer;
+}
+
+.btnAdd:hover {
+  color: black;
+  font-weight: bold;
+}
+.errorMess {
+  color: red;
+}

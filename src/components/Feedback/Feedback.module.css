@@ -1,9 +1,0 @@
-.feedbackList {
-  position: absolute; /* Встановлюємо абсолютне позиціонування */
-  left: 35%; /* Вирівнюємо відносно лівого краю .listOptions */
-  text-align: left; /* Вирівнюємо текст по лівому краю */
-}
-
-.feedbackList p {
-  text-align: left;
-}
